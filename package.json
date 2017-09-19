@@ -32,5 +32,8 @@
   "bugs": {
     "url": "https://github.com/mwei210/pixionary/issues"
   },
-  "homepage": "https://github.com/mwei210/pixionary#readme"
+  "homepage": "https://github.com/mwei210/pixionary#readme",
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.2"
+  }
 }
