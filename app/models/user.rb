@@ -22,7 +22,24 @@ class User < ApplicationRecord
   before_validation :ensure_session_token
 
   has_many :photos
-  has_many :follows
+
+  has_many :follower_links,
+    primary_key: :id,
+    foreign_key: :follower_id,
+    class_name: :Follow
+
+  has_many :followers,
+    through: :follower_links,
+    source: :follower
+
+  has_many :following_links,
+    primary_key: :id,
+    foreign_key: :following_id,
+    class_name: :Follow
+
+  has_many :followings,
+    through: :following_links,
+    source: :following
 
   attr_reader :password
 
