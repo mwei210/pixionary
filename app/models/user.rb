@@ -11,10 +11,12 @@
 #  bio               :text
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
+#  name              :string           not null
 #
 
 class User < ApplicationRecord
-  validates :username, :email, :password_digest, presence: true
+  validates :username, :email, :password_digest, :session_token, :name, presence: true
+  validates :username, :email, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true}
 
   before_validation :ensure_session_token
