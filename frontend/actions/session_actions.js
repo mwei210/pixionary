@@ -28,7 +28,3 @@ export const logout = () => dispatch => (
   SessionAPIUtil.logout()
     .then(user => dispatch(receiveCurrentUser(null)))
 );
-
-window.signup = signup;
-window.login = login;
-window.logout = logout;
