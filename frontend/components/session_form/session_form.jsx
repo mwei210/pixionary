@@ -69,7 +69,7 @@ class SessionForm extends React.Component {
                 value={this.state.password}/>
             </label>
             <br/>
-            <input type="submit" value={this.props.formType.toUppercase}/>
+            <input className="form-button" type="submit" />
           </div>
         </form>
       </div>

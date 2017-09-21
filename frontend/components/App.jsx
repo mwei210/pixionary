@@ -8,14 +8,14 @@ import {
 } from 'react-router-dom';
 import { AuthRoute } from '../util/route_util';
 
-import GreetingContainer from './greeting/greeting_container';
+import NavContainer from './nav/nav_container';
 import SessionFormContainer from './session_form/session_form_container';
 
 const App = () => (
   <div>
     <header>
       <h1>Welcome to Pixionary!</h1>
-      <GreetingContainer />
+      <NavContainer />
     </header>
 
     <AuthRoute path="/login" component={SessionFormContainer} />
