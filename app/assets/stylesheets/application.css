@@ -37,6 +37,7 @@
   display: flex;
   font-family: 'Roboto', sans-serif;
   flex-direction: row;
+  align-items: center;
 }
 
 li {

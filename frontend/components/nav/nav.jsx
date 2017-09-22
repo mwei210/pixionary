@@ -27,6 +27,9 @@ const personalNav = (currentUser, logout) => (
         <h3 className="header-links">Hi, {currentUser.username}</h3>
       </li>
       <li>
+        <Link to={`/photos/create`}>Upload Photo</Link>
+      </li>
+      <li>
         <button className="button" onClick={logout}>Log Out</button>
       </li>
     </div>
