@@ -17,9 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // testing
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchPhotos = PhotoAPIUtil.fetchPhotos;
-  window.fetchPhoto = PhotoAPIUtil.fetchPhoto;
-  window.createPhoto = PhotoAPIUtil.createPhoto;
   const root = document.getElementById('root');
   ReactDOM.render(<Root store={store}/>, root);
 });

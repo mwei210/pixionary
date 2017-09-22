@@ -13,6 +13,10 @@ class PhotoForm extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.props.clearErrors();
+  }
+
   update(field) {
     return (e) => this.setState({
       [field]: e.target.value
@@ -24,12 +28,27 @@ class PhotoForm extends React.Component {
     this.props.createPhoto(this.state);
   }
 
+  renderErrors() {
+    return (
+      <div className="form-error">
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+
   render() {
     return (
       <div className="photo-form-container">
         <PhotoContactForm/>
         <div className="photo-text-form-container">
           <form className="photo-text-form" onSubmit={this.handleSubmit}>
+            {this.renderErrors()}
             <label>Title:
               <input
                 type="text"

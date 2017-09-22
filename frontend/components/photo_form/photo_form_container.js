@@ -8,7 +8,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   clearErrors: () => dispatch(clearErrors()),
-  createPhoto: photo => dispatch(createPhoto()),
+  createPhoto: photo => dispatch(createPhoto(photo)),
 });
 
 export default connect(

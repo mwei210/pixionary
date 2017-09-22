@@ -5,7 +5,7 @@ class Api::PhotosController < ApplicationController
   def create
     @photo = Photo.new(photo_params)
     @photo.author_id = current_user.id
-    if @photo.save!
+    if @photo.save
       render "api/photos/show"
     else
       render json: @photo.errors.full_messages, status: 422

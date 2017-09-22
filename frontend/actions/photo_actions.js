@@ -15,9 +15,9 @@ export const receivePhoto = photo => ({
   photo
 });
 
-export const receiveErrors = error => ({
+export const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
-  error
+  errors
 });
 
 export const clearErrors = () => ({
