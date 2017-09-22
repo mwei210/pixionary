@@ -5,6 +5,7 @@ class SessionForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemoSubmit = this.handleDemoSubmit.bind(this);
     this.state = {
       name: "",
       email: "",
@@ -12,6 +13,10 @@ class SessionForm extends React.Component {
       password: "",
     };
     this.defaultProps = { errors: [] };
+  }
+
+  componentDidMount() {
+    this.props.clearErrors();
   }
 
   update(field) {
@@ -24,7 +29,12 @@ class SessionForm extends React.Component {
     e.preventDefault();
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
-    // .then(() => this.props.history.push(`/users/${this.state.username}`));
+  }
+
+  handleDemoSubmit(e) {
+    e.preventDefault();
+    this.setState({ username: "guest", password: "password" });
+    this.props.processForm({ username: "guest", password: "password" });
   }
 
   navLink() {
@@ -106,7 +116,12 @@ class SessionForm extends React.Component {
                 value={this.state.password}/>
             </label>
             <br/>
-            <input className="form-button" type="submit" />
+            <input className="button" type="submit" value="Submit"/>
+            <input
+              className="button"
+              type="button"
+              value="Guest Demo Login"
+              onClick={this.handleDemoSubmit}/>
           </div>
           {this.navLink()}
         </form>

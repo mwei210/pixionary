@@ -18,11 +18,6 @@ const sessionLinks = () => (
 );
 
 const personalNav = (currentUser, logout) => (
-  // <div className="nav-links">
-  //   <Link className="home-link" to={`/`}>Pixionary</Link>
-  //   <h2 className="header-text">Hi, {currentUser.username}</h2>
-  //   <button className="header-button" onClick={logout}>Log Out</button>
-  // </div>
   <ul className="navbar">
     <li className="home-link">
       <Link to={`/`}>Pixionary</Link>
@@ -32,7 +27,7 @@ const personalNav = (currentUser, logout) => (
         <h3 className="header-links">Hi, {currentUser.username}</h3>
       </li>
       <li>
-        <button className="header-links" onClick={logout}>Log Out</button>
+        <button className="button" onClick={logout}>Log Out</button>
       </li>
     </div>
   </ul>
