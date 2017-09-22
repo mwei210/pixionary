@@ -13,8 +13,101 @@
  *= require_tree .
  *= require_self
  */
-.personal-nav.session-links {
+
+.navbar {
+  list-style-type: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  border-right: 1px;
+}
+
+.home-link {
+  font-family: 'Delius', cursive;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.auth-links {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: row;
+}
+
+li {
+  padding: 14px 16px;
+}
+
+li * {
+  list-style-type: none;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: #538DA2;
+}
+
+.login-form-container {
+  display: flex;
+  justify-content: center;
+  width: 400px;
+  margin: 40px auto;
+  padding: 32px 40px 32px;
+  color: #71767a;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: #eeeff2;
+  border: 2px solid #6A6969;
+  font-size: 16px;
+  height: 100%;
+}
+
+h2 {
+  margin: 8px 0 16px;
+  font-size: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 4px 4px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 4px;
+}
+
+input[type=submit] {
+  background-color: #538DA2;
+  border-color: #498094;
+  text-shadow: 0px 1px 0px #498094;
+}
+
+input[type=submit]:hover {
+  background-color: #498094;
+}
+
+button {
+  background-color: #538DA2;
+  border-color: #498094;
+  text-shadow: 0px 1px 0px #498094;
+  padding: 6px 6px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #498094;
+}
+
+.form-error {
+  color: red;
 }

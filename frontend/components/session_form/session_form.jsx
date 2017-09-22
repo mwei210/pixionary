@@ -6,10 +6,14 @@ class SessionForm extends React.Component {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
+      name: "",
+      email: "",
       username: "",
-      password: ""
+      password: "",
     };
+    this.defaultProps = { errors: [] };
   }
+
   update(field) {
     return (e) => this.setState({
       [field]: e.target.value
@@ -24,22 +28,56 @@ class SessionForm extends React.Component {
 
   navLink() {
     if (this.props.formType === "login") {
-      return <Link to="/signup">sign up instead</Link>;
+      return (
+        <div className="box-nav-link">
+          Don't have an account? <Link to="/signup">Sign up</Link>
+        </div>
+      );
     }
     else {
-      return <Link to="/login">log in instead</Link>;
+      return (
+        <div className="box-nav-link">
+          Already have an account? <Link to="/login">Log in</Link>
+        </div>
+      );
+    }
+  }
+
+  renderSignUpFields() {
+    if (this.props.formType === "signup") {
+      return (
+        <div className="signup-form">
+          <label>Name:
+            <input
+              className="auth-fields"
+              type="text"
+              onChange={this.update("name")}
+              value={this.state.name}/>
+          </label>
+          <br/>
+          <label>Email:
+            <input
+              className="auth-fields"
+              type="text"
+              onChange={this.update("email")}
+              value={this.state.email}/>
+          </label>
+        </div>
+      )
     }
   }
 
   renderErrors() {
     return (
-      <ul>
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+      <div className="form-error">
+        <ul>
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
   }
 
@@ -47,23 +85,21 @@ class SessionForm extends React.Component {
     return (
       <div className="login-form-container">
         <form className="login-form-box" onSubmit={this.handleSubmit}>
-          Welcome to Pixionary!
-          <br/>
-          Please {this.props.formType} or {this.navLink()}
+          <h2>Welcome to Pixionary!</h2>
           {this.renderErrors()}
+          {this.renderSignUpFields()}
           <div className="login-form">
-            <br/>
             <label>Username:
               <input
-                className="login-username"
+                className="auth-fields"
                 type="text"
-                onChange={this.update('username')}
+                onChange={this.update("username")}
                 value={this.state.username}/>
             </label>
             <br/>
             <label>Password:
               <input
-                className="login-password"
+                className="auth-fields"
                 type="password"
                 onChange={this.update("password")}
                 value={this.state.password}/>
@@ -71,6 +107,7 @@ class SessionForm extends React.Component {
             <br/>
             <input className="form-button" type="submit" />
           </div>
+          {this.navLink()}
         </form>
       </div>
     );
