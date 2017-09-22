@@ -10,9 +10,9 @@ export const receiveCurrentUser = (currentUser) => {
   currentUser
 }};
 
-export const receiveErrors = (errors) => ({
+export const receiveErrors = (error) => ({
   type: RECEIVE_ERRORS,
-  errors
+  error
 });
 
 export const clearErrors = () => ({
