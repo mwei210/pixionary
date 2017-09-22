@@ -1,4 +1,4 @@
-import * as PhotoAPIUtil from './util/photo_api_util';
+import * as PhotoAPIUtil from '../util/photo_api_util';
 
 export const RECEIVE_PHOTOS = 'RECEIVE_PHOTOS';
 export const RECEIVE_PHOTO = 'RECEIVE_PHOTO';
@@ -26,12 +26,18 @@ export const clearErrors = () => ({
 
 export const fetchPhotos = userId => (
   PhotoAPIUtil.fetchPhotos(userId)
-  .then(photos => dispatch(receivePhotos(photos)),
-  error => dispatch(receiveErrors(error.responseJSON)))
+    .then(photos => dispatch(receivePhotos(photos)),
+    error => dispatch(receiveErrors(error.responseJSON)))
 );
 
 export const fetchPhoto = id => (
   PhotoAPIUtil.fetchPhotos(id)
-  .then(photo => dispatch(receivePhoto(photo)),
-  error => dispatch(receiveErrors(error.responseJSON)))
+    .then(photo => dispatch(receivePhoto(photo)),
+    error => dispatch(receiveErrors(error.responseJSON)))
+);
+
+export const createPhoto = photo => (
+  PhotoAPIUtil.createPhoto(photo)
+    .then(photo => dispatch(receivePhoto(photo)),
+    error => dispatch(receiveErrors(error.responseJSON)))
 );
