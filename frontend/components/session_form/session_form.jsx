@@ -33,8 +33,20 @@ class SessionForm extends React.Component {
 
   handleDemoSubmit(e) {
     e.preventDefault();
-    this.setState({ username: "guest", password: "password" });
-    this.props.processForm({ username: "guest", password: "password" });
+    let demoUsername = "guest".split("");
+    let demoPassword = "password".split("");
+    let interval = setInterval(() => {
+      if (demoUsername.length > 0) {
+        this.setState({ username: this.state.username.concat(demoUsername.shift()) });
+      }
+      else if (demoPassword.length > 0) {
+        this.setState({ password: this.state.password.concat(demoPassword.shift()) });
+      }
+      else {
+        clearInterval(interval);
+        this.props.processForm(this.state);
+      }
+    }, 100);
   }
 
   navLink() {
