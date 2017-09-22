@@ -35,6 +35,7 @@ class SessionForm extends React.Component {
     e.preventDefault();
     let demoUsername = "guest".split("");
     let demoPassword = "password".split("");
+    this.setState({ username: "", password: "" });
     let interval = setInterval(() => {
       if (demoUsername.length > 0) {
         this.setState({ username: this.state.username.concat(demoUsername.shift()) });
