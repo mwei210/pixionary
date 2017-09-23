@@ -85,6 +85,16 @@ input {
   border-radius: 4px;
 }
 
+textarea {
+  width: 100%;
+  padding: 4px 4px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid grey;
+  border-radius: 4px;
+  height: auto;
+}
+
 .button {
   background-color: #538DA2;
   border-color: #498094;
@@ -101,4 +111,45 @@ input {
 
 .form-error {
   color: red;
+}
+
+.photo-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 40px auto;
+  padding: 32px 40px 32px;
+
+}
+
+.photo-text-form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 400px;
+  margin: 40px auto;
+  padding: 32px 40px 32px;
+  color: #71767a;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: #eeeff2;
+  border: 2px solid #6A6969;
+  font-size: 16px;
+  height: 100%;
+}
+
+.dropzone {
+  border: 2px dashed #6A6969;
+  width: 1200px;
+  height: 750px;
+  background-color: #eeeff2;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  line-height: 450px;
+}
+
+.dropzone-preview {
+  margin: auto;
 }

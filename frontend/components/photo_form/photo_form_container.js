@@ -3,12 +3,13 @@ import { createPhoto, clearErrors } from '../../actions/photo_actions';
 import PhotoForm from './photo_form';
 
 const mapStateToProps = state => ({
+  currentUser: state.session.currentUser,
   errors: state.errors.photoForm
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   clearErrors: () => dispatch(clearErrors()),
-  createPhoto: photo => dispatch(createPhoto(photo)),
+  createPhoto: photo => dispatch(createPhoto(photo))
 });
 
 export default connect(

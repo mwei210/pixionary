@@ -42,20 +42,20 @@ class PhotoContactForm extends React.Component {
     return (
       <div className="file-upload-container">
         <div className="file-upload">
-          <Dropzone
+          <Dropzone className="dropzone"
             multiple={false}
             accept="image/*"
             onDrop={this.onImageDrop}>
-            <p>Drag and drop an image, or click to select a file to upload.</p>
-          </Dropzone>
-        </div>
-        <div className="file-upload-preview">
-          { this.state.uploadedFileCloudinaryURL === "" ? null :
-            <div>
-              <p>{this.state.uploadedFile.name}</p>
-              <img src={this.state.uploadedFileCloudinaryURL} />
+            <div className="dropzone-text-preview">
+              {
+                this.state.uploadedFileCloudinaryURL === "" ?
+                <p>Drag and drop an image, or click to select a file to upload.</p> :
+                <div>
+                  <img src={this.state.uploadedFileCloudinaryURL} />
+                </div>
+              }
             </div>
-          }
+          </Dropzone>
         </div>
       </div>
     )

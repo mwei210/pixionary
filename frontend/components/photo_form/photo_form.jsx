@@ -30,7 +30,8 @@ class PhotoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createPhoto(this.state);
+    this.props.createPhoto(this.state)
+      .then((data) => this.props.history.push(`/photos/${data.photo.id}`));
   }
 
   renderErrors() {
@@ -49,10 +50,14 @@ class PhotoForm extends React.Component {
 
   render() {
     return (
-      <div className="photo-form-container">
-        <div className="photo-text-form-container">
-          <form className="photo-text-form" onSubmit={this.handleSubmit}>
+      <div>
+        <form
+          className="photo-form-container"
+          onSubmit={this.handleSubmit}>
+          <div className="photo-upload">
             <PhotoContactForm setURL={this.setURL} />
+          </div>
+          <div className="photo-text-form-container">
             {this.renderErrors()}
             <label>Title:
               <input
@@ -69,8 +74,8 @@ class PhotoForm extends React.Component {
               className="button"
               type="submit"
               value="Share"/>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
     );
   }
