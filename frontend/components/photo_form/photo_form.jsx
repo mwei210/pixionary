@@ -6,6 +6,7 @@ class PhotoForm extends React.Component {
   constructor(props) {
     super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.setURL = this.setURL.bind(this);
     this.state = {
       url: "",
       title: "",
@@ -21,6 +22,10 @@ class PhotoForm extends React.Component {
     return (e) => this.setState({
       [field]: e.target.value
     });
+  }
+
+  setURL(url) {
+    this.setState({ url });
   }
 
   handleSubmit(e) {
@@ -45,9 +50,9 @@ class PhotoForm extends React.Component {
   render() {
     return (
       <div className="photo-form-container">
-        <PhotoContactForm/>
         <div className="photo-text-form-container">
           <form className="photo-text-form" onSubmit={this.handleSubmit}>
+            <PhotoContactForm setURL={this.setURL} />
             {this.renderErrors()}
             <label>Title:
               <input

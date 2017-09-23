@@ -24,7 +24,7 @@ class PhotoContactForm extends React.Component {
   handleImageUpload(file) {
     let upload = request.post(CLOUDINARY_UPLOAD_URL)
                         .field("upload_preset", CLOUDINARY_UPLOAD_PRESET)
-                        .FIELD("file", file);
+                        .field("file", file);
     upload.end((err, response) => {
       if (err) {
         console.error(err);
@@ -33,6 +33,7 @@ class PhotoContactForm extends React.Component {
         this.setState({
           uploadedFileCloudinaryURL: response.body.secure_url
         })
+        this.props.setURL(this.state.uploadedFileCloudinaryURL);
       }
     });
   }
