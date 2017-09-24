@@ -8,7 +8,9 @@ class PhotoShow extends React.Component {
 
   render() {
     const photo = this.props.photo;
+    const currentUser = this.props.currentUser;
     const title = photo.title ? photo.title : "Untitled";
+
     if (!photo) {
       return <div>Loading...</div>;
     }
@@ -20,17 +22,13 @@ class PhotoShow extends React.Component {
         </div>
         <div className="photo-info">
           <div className="photo-author-info">
-
+            {}
           </div>
           <div className="photo-title-info">
-            <text>
-              {photo.title}
-            </text>
+            {photo.title}
           </div>
           <div className="photo-description-info">
-            <text>
-              {photo.description}
-            </text>
+            {photo.description}
           </div>
         </div>
       </div>

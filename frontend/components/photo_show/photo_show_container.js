@@ -3,7 +3,8 @@ import { fetchPhoto } from '../../actions/photo_actions';
 import PhotoShow from './photo_show';
 
 const mapStateToProps = (state, ownProps) => ({
-  photo: state.entities.photos[ownProps.match.params.photoId]
+  photo: state.entities.photos[ownProps.match.params.photoId],
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = dispatch => ({
