@@ -26,18 +26,15 @@ export const clearErrors = () => ({
 
 export const fetchPhotos = userId => dispatch => (
   PhotoAPIUtil.fetchPhotos(userId)
-    .then(photos => dispatch(receivePhotos(photos)),
-    error => dispatch(receiveErrors(error.responseJSON)))
+    .then(photos => dispatch(receivePhotos(photos)))
 );
 
 export const fetchPhoto = id => dispatch => (
-  PhotoAPIUtil.fetchPhotos(id)
-    .then(photo => dispatch(receivePhoto(photo)),
-    error => dispatch(receiveErrors(error.responseJSON)))
+  PhotoAPIUtil.fetchPhoto(id)
+    .then(photo => dispatch(receivePhoto(photo)))
 );
 
 export const createPhoto = photo => dispatch => (
   PhotoAPIUtil.createPhoto(photo)
-    .then(photo => dispatch(receivePhoto(photo)),
-    error => dispatch(receiveErrors(error.responseJSON)))
+    .then(photo => dispatch(receivePhoto(photo)))
 );

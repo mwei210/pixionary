@@ -2,37 +2,41 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
 class PhotoShow extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchPhoto(this.props.match.params.photoId);
   }
 
-  render() {
-    const photo = this.props.photo;
-    const currentUser = this.props.currentUser;
-    const title = photo.title ? photo.title : "Untitled";
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.photoId !== nextProps.match.params.photoId) {
+      this.props.fetchPhoto(nextProps.match.params.photoId);
+    }
+  }
 
-    if (!photo) {
+  render() {
+    const currentUser = this.props.currentUser;
+    if (!this.props.photo) {
       return <div>Loading...</div>;
     }
-
-    return (
-      <div className="photo-show-container">
-        <div className="photo">
-          <img src={photo.url} />
+    else{
+      return (
+        <div className="photo-show-container">
+          <div className="photo">
+            <img src={this.props.photo.url} />
+          </div>
+          <div className="photo-info">
+            <div className="photo-author-info">
+              {this.props.photo.author_id}
+            </div>
+            <div className="photo-title-info">
+              {this.props.photo.title}
+            </div>
+            <div className="photo-description-info">
+              {this.props.photo.description}
+            </div>
+          </div>
         </div>
-        <div className="photo-info">
-          <div className="photo-author-info">
-            {}
-          </div>
-          <div className="photo-title-info">
-            {photo.title}
-          </div>
-          <div className="photo-description-info">
-            {photo.description}
-          </div>
-        </div>
-      </div>
-    );
+      );
+    }
   }
 }
 

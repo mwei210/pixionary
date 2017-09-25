@@ -1,5 +1,13 @@
 class Api::PhotosController < ApplicationController
   def index
+    if current_user
+      @user = current_user
+      if @user.followings.length.empty?
+        @photos = Photo.all
+      else
+        @photos = Photo.where(user: @user.followings).order(created_at: :desc)
+      end
+    end
   end
 
   def create
