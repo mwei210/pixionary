@@ -33,6 +33,7 @@ class SessionForm extends React.Component {
 
   handleDemoSubmit(e) {
     e.preventDefault();
+    this.props.history.push("/login");
     let demoUsername = "guest".split("");
     let demoPassword = "password".split("");
     this.setState({ username: "", password: "" });

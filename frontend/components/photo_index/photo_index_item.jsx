@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 import PhotoShowContainer from '../photo_show/photo_show_container';
 
@@ -33,4 +32,4 @@ class PhotoIndexItem extends React.Component {
   }
 }
 
-export default withRouter(PhotoIndexItem);
+export default PhotoIndexItem;

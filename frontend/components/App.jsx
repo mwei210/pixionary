@@ -13,6 +13,7 @@ import SessionFormContainer from './session_form/session_form_container';
 import PhotoFormContainer from './photo_form/photo_form_container';
 import PhotoShowContainer from './photo_show/photo_show_container';
 import PhotoIndexContainer from './photo_index/photo_index_container';
+import UserShowContainer from './user_show/user_show_container';
 
 const App = () => (
   <div>
@@ -20,11 +21,12 @@ const App = () => (
       <NavContainer />
     </header>
     <Switch>
+      <Route exact path="/" component={PhotoIndexContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute exact path="/photos/create" component={PhotoFormContainer} />
       <Route path="/photos/:photoId" component={PhotoShowContainer} />
-      <Route exact path="/" component={PhotoIndexContainer} />
+      <Route path="/users/:userId" component={UserShowContainer} />
     </Switch>
   </div>
 );
