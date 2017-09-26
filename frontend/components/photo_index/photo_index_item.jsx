@@ -11,7 +11,6 @@ class PhotoIndexItem extends React.Component {
 
   handleClick() {
     const photoId = this.props.photo.id;
-    debugger;
     this.props.history.push(`/photos/${photoId}`);
   }
 

@@ -21,7 +21,6 @@ const App = () => (
       <NavContainer />
     </header>
     <Switch>
-      // <Route exact path="/" component={PhotoIndexContainer} />
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute exact path="/photos/create" component={PhotoFormContainer} />

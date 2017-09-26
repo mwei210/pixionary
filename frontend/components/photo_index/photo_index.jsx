@@ -11,6 +11,12 @@ class PhotoIndex extends React.Component {
     this.props.fetchPhotos(this.props.match.params.userId);
   }
 
+  componentWillReceiveProps(nextProps) {
+    if (this.props.match.params.userId !== nextProps.match.params.userId) {
+      this.props.fetchPhotos(nextProps.match.params.userId);
+    }
+  }
+
   render() {
     console.log(this.props);
     if (!this.props.photos) {

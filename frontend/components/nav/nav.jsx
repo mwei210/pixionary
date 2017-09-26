@@ -24,7 +24,9 @@ const personalNav = (currentUser, logout) => (
     </li>
     <div className="auth-links">
       <li>
-        <h3 className="header-links">Hi, {currentUser.name.split(" ")[0]}</h3>
+        <Link to={`/users/${currentUser.id}`}>
+          Hi, {currentUser.name.split(" ")[0]}
+        </Link>
       </li>
       <li>
         <Link to={`/photos/create`}>Upload Photo</Link>
