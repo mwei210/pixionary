@@ -27,7 +27,7 @@ class PhotoShow extends React.Component {
               {this.props.photo.author.name}
             </div>
             <div className="photo-title-info">
-              {this.props.photo.title}
+              {this.props.photo.title || "Untitled"}
             </div>
             <div className="photo-description-info">
               {this.props.photo.description}

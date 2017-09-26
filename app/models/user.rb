@@ -21,7 +21,10 @@ class User < ApplicationRecord
 
   before_validation :ensure_session_token
 
-  has_many :photos
+  has_many :photos,
+    primary_key: :id,
+    foreign_key: :author_id,
+    class_name: :Photo
 
   has_many :follower_links,
     primary_key: :id,
