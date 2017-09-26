@@ -1,17 +1,20 @@
 class Api::PhotosController < ApplicationController
   def index
-    # if current_user
-    #   @user = current_user
-    #   if @user.followings.length.empty?
-    #     @photos = Photo.all
-    #   else
-        # @photos = Photo.where(user: @user.followings).order(created_at: :desc)
-    #   end
-    # end
-    if (current_user.id == params[:id])
-      @photos = current_user.photos
+    if params[:id]
+      if current_user.id == params[:id]
+        @photos = current_user.photos
+      else
+        @photos = User.find(params[:id]).photos
+      end
     else
-      @photos = User.find(params[:id]).photos
+      if current_user
+        @user = current_user
+        if @user.followings.length.empty?
+          @photos = Photo.all
+        else
+          @photos = Photo.where(user: @user.followings).order(created_at: :desc)
+        end
+      end
     end
   end
 
