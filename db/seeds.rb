@@ -11,7 +11,7 @@ User.delete_all
 User.create(
   username: "guest",
   password: "password",
-  name: "Guy Incognito",
+  name: "Guest User",
   email: "randomname@example.com"
 )
 

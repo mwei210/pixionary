@@ -3,9 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 class PhotoShow extends React.Component {
   componentWillMount() {
-    debugger;
     this.props.fetchPhoto(this.props.match.params.photoId);
-    // this.props.fetchUser(this.props.photo.)
   }
 
   componentWillReceiveProps(nextProps) {
@@ -19,7 +17,6 @@ class PhotoShow extends React.Component {
       return <div>Loading...</div>;
     }
     else {
-      debugger;
       return (
         <div className="photo-show-container">
           <div className="photo">
@@ -27,7 +24,7 @@ class PhotoShow extends React.Component {
           </div>
           <div className="photo-info">
             <div className="photo-author-info">
-              // {this.props.author}
+              {this.props.photo.author.name}
             </div>
             <div className="photo-title-info">
               {this.props.photo.title}

@@ -7,9 +7,12 @@ class UserShow extends React.Component {
   }
 
   render() {
+    if (!this.props.user) {
+      return (<div>Loading...</div>);
+    }
     return (
       <div>
-        This is the User Show page
+        {this.props.user.username}
       </div>
     );
   }
