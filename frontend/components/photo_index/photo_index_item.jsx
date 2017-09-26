@@ -18,7 +18,7 @@ class PhotoIndexItem extends React.Component {
   render() {
     const { title, description, url, author, author: { username } } = this.props.photo;
     return (
-      <div className="photo-index-item" onClick={this.handleClick}>
+      <div className="photo-index-item">
         <div className="index-item-info">
           <div className="index-item-category">Title:</div>
           <div className="index-item-copy">
@@ -27,7 +27,7 @@ class PhotoIndexItem extends React.Component {
           <div className="index-item-category">Description:</div>
           <div className="index-item-copy">{description}</div>
         </div>
-        <img src={url}/>
+        <img onClick={this.handleClick} src={url}/>
       </div>
     );
   }
