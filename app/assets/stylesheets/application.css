@@ -193,12 +193,16 @@ textarea {
 .photo-index {
   line-height: 0;
   -webkit-column-count: 5;
-  -webkit-column-gap: 10px;
+  -webkit-column-gap: 16px;
   -moz-column-count: 5;
-  -moz-column-gap: 10px;
+  -moz-column-gap: 16px;
   column-count: 5;
-  column-gap: 10px;
-  margin: 10px;
+  column-gap: 16px;
+  margin: 16px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .photo-index-item {
@@ -206,18 +210,13 @@ textarea {
   text-align: center;
   width: 100%;
   height: auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: 10px;
+  padding-top: 16px;
 }
 
 .photo-index-photo {
   cursor: pointer;
   position: relative;
   display: block;
-  box-sizing: border-box;
   width: 100%;
   height: auto;
   border: 1px solid #6A6969;
