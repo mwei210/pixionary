@@ -9,7 +9,9 @@
 User.delete_all
 Photo.delete_all
 
-User.create(
+# Users
+
+user1 = User.create(
   username: "guest",
   password: "password",
   name: "Guest User",
@@ -18,7 +20,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506538499/cadiz-189297_960_720_mnancn.jpg"
 )
 
-User.create(
+user2 = User.create(
   username: "crazyfox115",
   password: "password",
   name: "Helena Valk",
@@ -27,7 +29,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/blonde-1180343_960_720_xustjt.jpg"
 )
 
-User.create(
+user3 = User.create(
   username: "sammiesam",
   password: "password",
   name: "Samantha Covington",
@@ -36,7 +38,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/aviator-1322701_960_720_mbsfkr.jpg"
 )
 
-User.create(
+user4 = User.create(
   username: "gvrabel",
   password: "password",
   name: "Gus Vrabel",
@@ -45,7 +47,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/photographer-1210243_960_720_hi0gh9.jpg"
 )
 
-User.create(
+user5 = User.create(
   username: "oscar89",
   password: "password",
   name: "Oscar Sandoval",
@@ -54,7 +56,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/face-2351158_960_720_yvpr3w.jpg"
 )
 
-User.create(
+user6 = User.create(
   username: "igotyucovered",
   password: "password",
   name: "Jennifer Yu",
@@ -63,7 +65,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541830/girl-2205813_960_720_wbojej.jpg"
 )
 
-User.create(
+user7 = User.create(
   username: "",
   password: "whansen1962",
   name: "Will Hansen",
@@ -72,7 +74,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541830/face-984031_960_720_pnhybd.jpg"
 )
 
-User.create(
+user8 = User.create(
   username: "browneyedgirl",
   password: "password",
   name: "Anita Khan",
@@ -81,7 +83,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541830/studio-660804_960_720_fpjk5t.jpg"
 )
 
-User.create(
+user9 = User.create(
   username: "sonofchen",
   password: "password",
   name: "Wilson Chen",
@@ -90,7 +92,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506544404/sport-1815798_960_720_wysjt2.jpg"
 )
 
-User.create(
+user10 = User.create(
   username: "ulolonulloa",
   password: "password",
   name: "Ulrich Olsen",
@@ -99,7 +101,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/self-2641581_960_720_i225k8.jpg"
 )
 
-User.create(
+user11 = User.create(
   username: "prancer81",
   password: "password",
   name: "Alondra Jenkins",
@@ -108,7 +110,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/woman-659348_960_720_uqgh2q.jpg"
 )
 
-User.create(
+user12 = User.create(
   username: "jalcantara",
   password: "password",
   name: "Jose Alcantara",
@@ -117,7 +119,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/man-1284310_960_720_yl0ont.jpg"
 )
 
-User.create(
+user13 = User.create(
   username: "branigan97",
   password: "password",
   name: "Bree Hannigan",
@@ -126,7 +128,7 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/girl-518321_960_720_yaxgkk.jpg"
 )
 
-User.create(
+user14 = User.create(
   username: "carriewilliamson",
   password: "password",
   name: "Carrie Williamson",
@@ -135,11 +137,97 @@ User.create(
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/fashion-1048728_960_720_p8nho7.jpg"
 )
 
-User.create(
+user15 = User.create(
   username: "looking_glass_alice",
   password: "password",
   name: "Alice Kingman",
   email: "looking_glass_alice@pixionary.com",
   bio: "Look at all the things I spied on with my little eye!",
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/selfie-933229_960_720_zoxyvm.jpg"
+)
+
+# Photos
+
+Photo.create(
+url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547138/road-220058_960_720_uabzye.jpg",
+title: "Endless Horizons",
+description: "This road just goes on and on...",
+author_id: user1.id
+)
+
+Photo.create(
+url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547372/mountain-landscape-640617_960_720_bpszng.jpg",
+title: "Sun-kissed Hills",
+description: "This fog was super dramatic.",
+author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547372/sunset-169925_960_720_vjxlt5.jpg",
+  title: "Sweltering Sunset",
+  description: "Warm. Humid. Sweaty. Beautiful.",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547372/countryside-2175353_960_720_qfr3ec.jpg",
+  title: "Dramatic Rays",
+  description: "These light rays emerged at the perfect time for this shot.",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547372/mountain-2143877_960_720_tjcvjz.jpg",
+  title: "Lone Rock",
+  description: "This rock stands watch over the rest of the barren plain.",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547372/landscape-1619283_960_720_brrxwt.jpg",
+  title: "Mist",
+  description: "Love how the plants peek through the fog.",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547372/sunset-1326162_960_720_y7yinu.jpg",
+  title: "The Red Hour",
+  description: "I'm a sucker for red clouds during sunsets!",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547372/landscape-2211587_960_720_cgvtgp.jpg",
+  title: "Expansive Farmland",
+  description: "How many bugs live in this field before us?",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547373/mountain-1504197_960_720_evjnjm.jpg",
+  title: "Quadrant",
+  description: "Love how this one came out. Earth, water, and air come together.",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547373/hut-1681485_960_720_ut2hnj.jpg",
+  title: "Clearwater",
+  description: "This shot looks straight out of a Bob Ross painting. Maybe more trees.",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547373/mountains-1012425_960_720_yxtmsg.jpg",
+  title: "Autumn",
+  description: "Love how the sun hits these dying leaves.",
+  author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506547373/snow-616319_960_720_he3f7p.jpg",
+  title: "Glowing Gazebo",
+  description: "This gazebo almost looks drawn on with how much it contrasts with the snow.",
+  author_id: user1.id
 )
