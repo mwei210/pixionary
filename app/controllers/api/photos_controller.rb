@@ -12,7 +12,9 @@ class Api::PhotosController < ApplicationController
         if @user.followings.length.empty?
           @photos = Photo.all
         else
-          @photos = Photo.where(user: @user.followings).order(created_at: :desc)
+          @photos = Photo
+            .where(user: @user.followings)
+            .order(created_at: :desc)
         end
       end
     end

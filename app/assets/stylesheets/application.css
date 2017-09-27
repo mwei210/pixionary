@@ -153,3 +153,84 @@ textarea {
 .dropzone-preview {
   margin: auto;
 }
+
+.photo-show-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
+
+.photo {
+  border: 2px solid black;
+  margin: 40px auto;
+}
+
+.photo-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 400px;
+  margin: 40px auto;
+  padding: 32px 40px 32px;
+  color: #71767a;
+  position: relative;
+  font-family: 'Roboto', sans-serif;
+  background-color: #eeeff2;
+  border: 2px solid #6A6969;
+  font-size: 16px;
+  height: 100%;
+}
+
+.photo-title-info {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.photo-description-info {
+  font-style: italic;
+}
+
+.photo-index {
+  
+}
+
+.photo-index-item {
+  position: relative;
+  width: 50%;
+}
+
+.photo-index-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.index-item-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0.85;
+  background-color: #6A6969;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.photo-index-item:hover .index-item-overlay {
+  height: 20%;
+}
+
+.index-item-title {
+  white-space: nowrap;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}

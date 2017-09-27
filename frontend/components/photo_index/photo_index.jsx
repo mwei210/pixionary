@@ -17,14 +17,13 @@ class PhotoIndex extends React.Component {
       return (<div>Loading...</div>);
     }
     return (
-      <div>
-        <h1>This is the PhotoIndexContainer</h1>
-        {this.props.photos.map(photo => (
+      <div className="photo-index">
+        { this.props.photos.map(photo => (
           <PhotoIndexItem
             photo={photo}
             key={photo.id}
           />
-        ))}
+        )) }
       </div>
     );
   }

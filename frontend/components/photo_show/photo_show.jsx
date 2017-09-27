@@ -23,11 +23,11 @@ class PhotoShow extends React.Component {
             <img src={this.props.photo.url} />
           </div>
           <div className="photo-info">
-            <div className="photo-author-info">
-              {this.props.photo.author.name}
-            </div>
             <div className="photo-title-info">
               {this.props.photo.title || "Untitled"}
+            </div>
+            <div className="photo-author-info">
+              {this.props.photo.author.name}
             </div>
             <div className="photo-description-info">
               {this.props.photo.description}

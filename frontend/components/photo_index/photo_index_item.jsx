@@ -18,15 +18,10 @@ class PhotoIndexItem extends React.Component {
     const { title, description, url, author, author: { username } } = this.props.photo;
     return (
       <div className="photo-index-item">
-        <div className="index-item-info">
-          <div className="index-item-category">Title:</div>
-          <div className="index-item-copy">
-            {title || "Untitled"}
-          </div>
-          <div className="index-item-category">Description:</div>
-          <div className="index-item-copy">{description}</div>
+        <img className="photo-index-photo" onClick={this.handleClick} src={url}/>
+        <div className="index-item-overlay">
+          <div className="index-item-title">{title || "Untitled"}</div>
         </div>
-        <img onClick={this.handleClick} src={url}/>
       </div>
     );
   }
