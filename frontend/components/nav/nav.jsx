@@ -20,7 +20,7 @@ const sessionLinks = () => (
 const personalNav = (currentUser, logout) => (
   <ul className="navbar">
     <li className="home-link">
-      <Link to={`/`}>Pixionary</Link>
+      <Link to={`/feed`}>Pixionary</Link>
     </li>
     <div className="auth-links">
       <li>

@@ -1,8 +1,8 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
-import PhotoIndexItem from './photo_index_item';
+import FeedIndexItem from './feed_index_item';
 
-class PhotoIndex extends React.Component {
+class FeedIndex extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -16,9 +16,9 @@ class PhotoIndex extends React.Component {
       return (<div>Loading...</div>);
     }
     return (
-      <div className="photo-index">
+      <div className="feed-index-container">
         { this.props.photos.map(photo => (
-          <PhotoIndexItem
+          <FeedIndexItem
             photo={photo}
             key={photo.id}
           />
@@ -29,4 +29,4 @@ class PhotoIndex extends React.Component {
 
 }
 
-export default withRouter(PhotoIndex);
+export default withRouter(FeedIndex);
