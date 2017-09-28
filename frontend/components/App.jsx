@@ -21,9 +21,10 @@ const App = () => (
       <NavContainer />
     </header>
     <Switch>
+
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
-      <ProtectedRoute exact path="/photos/create" component={PhotoFormContainer} />
+      <ProtectedRoute path="/photos/create" component={PhotoFormContainer} />
       <Route path="/photos/:photoId" component={PhotoShowContainer} />
       <Route path="/users/:userId" component={UserShowContainer} />
     </Switch>

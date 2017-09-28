@@ -88,7 +88,7 @@ user9 = User.create(
   password: "password",
   name: "Wilson Chen",
   email: "sonofchen@pixionary.com",
-  bio: "Techie loving life in SF!",
+  bio: "Foodie loving life in SF!",
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506544404/sport-1815798_960_720_wysjt2.jpg"
 )
 
@@ -230,4 +230,144 @@ Photo.create(
   title: "Glowing Gazebo",
   description: "This gazebo almost looks drawn on with how much it contrasts with the snow.",
   author_id: user1.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/snow-2597803_960_720_ttfvia.jpg",
+  title: "Sunset Fox",
+  description: "It looks so dignified!",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/fox-2652814_960_720_fcgokk.jpg",
+  title: "Cat Eye Fox",
+  description: "This fox looks like it has cat eyes. Kind of unsettling.",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/animal-1850186_960_720_cdfe5f.jpg",
+  title: "Tail Fox",
+  description: "Trying to hide behind its fluffy tail!",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/fox-1540833_960_720_pl2abx.jpg",
+  title: "Water Fox",
+  description: "Does it know it's staring at a reflection?",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/fox-1284512_960_720_fp3uwi.jpg",
+  title: "Tree Fox",
+  description: "Awww it found a stump to rest on!",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/fox-1883658_960_720_fbf5x1.jpg",
+  title: "Fluffy Fox",
+  description: "I just want to tussle its belly!",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/iceland-1979445_960_720_wbtaex.jpg",
+  title: "Kit Fox",
+  description: "Such a cute kit!",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/t_media_lib_thumb/v1506551014/desert-fox-2444231_960_720_z9if0o.jpg",
+  title: "Desert Fox",
+  description: "Look how big its ears are! I wonder if that has to do with cooling itself.",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/animal-1842565_960_720_d86ofe.jpg",
+  title: "Mad Fox",
+  description: "This one doesn't look so happy!",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551014/adorable-1853508_960_720_f6nebx.jpg",
+  title: "White Fox",
+  description: "Stared at me menacingly for a while. Still cute!",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551015/adorable-1851594_960_720_ynnn3r.jpg",
+  title: "Not a Fox",
+  description: "Is this called a Red Panda or something? Oh well, they're cute too.",
+  author_id: user2.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/dead-pool-1903058_960_720_svlw7i.jpg",
+  title: "Deadpool",
+  description: "Not as easy make one of these costumes as the movies suggest.",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/chun-li-1724891_960_720_gxocom.jpg",
+  title: "Chun Li",
+  description: "Very enthusiastic in person!",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/starwars-1620970_960_720_bfsjae.jpg",
+  title: "Tuskens",
+  description: "Never saw one of these in person until now.",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/geek-2441651_960_720_jks5is.jpg",
+  title: "The Joker",
+  description: "Sometimes you want more Mark Hamill than Heath Ledger.",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/cosplay-2172325_960_720_qhgz06.jpg",
+  title: "Harley Quinn",
+  description: "She deserves all the fire emojis.",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551015/adorable-1851594_960_720_ynnn3r.jpg",
+  title: "Captain America",
+  description: "My money is on the Captain.",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552365/alice-in-wonderland-872612_960_720_ibnvel.jpg",
+  title: "Alice in Wonderland",
+  description: "Not my favorite costume, but they were nice in person.",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/cosplay-1546490_960_720_hyq6d8.jpg",
+  title: "Mary Poppins",
+  description: "Her costume was spic and span!",
+  author_id: user3.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552365/cosplay-980228_960_720_rdpse9.jpg",
+  title: "Poison Ivy",
+  description: "Absolutely nailed the look.",
+  author_id: user3.id
 )

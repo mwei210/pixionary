@@ -19,11 +19,16 @@ class UserShow extends React.Component {
     }
     const { username, name, email, bio, profile_photo_url } = this.props.user;
     return (
-      <div>
-        {username}
-        {username}
-        {email}
-        {bio}
+      <div className="user-show-container">
+        <div className="user-info-container">
+          <img className="profile-photo" src={profile_photo_url}/>
+          <div className="profile-name">
+            {name}
+          </div>
+          <div className="profile-bio">
+            {bio}
+          </div>
+        </div>
         <PhotoIndexContainer/>
       </div>
     );
