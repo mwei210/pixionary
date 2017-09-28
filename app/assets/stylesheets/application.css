@@ -272,6 +272,7 @@ textarea {
   padding-top: 16px;
   height: 400px;
   background-color: #eeeff2;
+  border-bottom: 1px solid #6A6969;
 }
 
 .profile-photo {

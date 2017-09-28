@@ -371,3 +371,14 @@ Photo.create(
   description: "Absolutely nailed the look.",
   author_id: user3.id
 )
+
+
+Follow.create(
+  follower_id: user1.id,
+  following_id: user2.id
+)
+
+Follow.create(
+  follower_id: user1.id,
+  following_id: user3.id
+)
