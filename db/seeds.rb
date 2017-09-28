@@ -312,7 +312,7 @@ Photo.create(
 Photo.create(
   url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/dead-pool-1903058_960_720_svlw7i.jpg",
   title: "Deadpool",
-  description: "Not as easy make one of these costumes as the movies suggest.",
+  description: "Not as easy to make one as the movies might suggest.",
   author_id: user3.id
 )
 

@@ -28,6 +28,14 @@ class UserShow extends React.Component {
           <div className="profile-bio">
             {bio}
           </div>
+          <div className="profile-follows">
+            <div className="followers">
+              35 followers
+            </div>
+            <div className="following">
+              118 following
+            </div>
+          </div>
         </div>
         <PhotoIndexContainer/>
       </div>

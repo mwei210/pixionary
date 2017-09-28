@@ -193,11 +193,11 @@ textarea {
 
 .photo-index {
   line-height: 0;
-  -webkit-column-count: 3;
+  -webkit-column-count: 4;
   -webkit-column-gap: 16px;
-  -moz-column-count: 3;
+  -moz-column-count: 4;
   -moz-column-gap: 16px;
-  column-count: 3;
+  column-count: 4;
   column-gap: 16px;
   margin: 16px;
   -webkit-box-sizing: border-box;
@@ -257,6 +257,7 @@ textarea {
 }
 
 .user-show-container {
+  font-family: 'Roboto', sans-serif;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -264,6 +265,38 @@ textarea {
 
 .user-info-container {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
-  height: 600px;
+  padding-top: 16px;
+  height: 400px;
+  background-color: #eeeff2;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #6A6969;
+}
+
+.profile-name {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.profile-follows {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.followers {
+  margin: 10px;
+}
+
+.following {
+  margin: 10px;
 }
