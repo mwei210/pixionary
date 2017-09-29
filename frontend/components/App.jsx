@@ -16,6 +16,7 @@ import PhotoShowContainer from './photo_show/photo_show_container';
 import PhotoIndexContainer from './photo_index/photo_index_container';
 import UserShowContainer from './user_show/user_show_container';
 import FeedIndexContainer from './feed_index/feed_index_container';
+import Footer from './footer';
 
 const App = () => (
   <div>
@@ -32,7 +33,7 @@ const App = () => (
       <Route path="/users/:userId" component={UserShowContainer} />
     </Switch>
     <footer>
-      <FooterContainer />
+      <Footer />
     </footer>
   </div>
 );

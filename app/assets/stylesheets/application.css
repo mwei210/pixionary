@@ -57,7 +57,6 @@
   color: #538DA2;
 }
 
-
 .navbar {
   list-style-type: none;
   display: flex;
@@ -431,4 +430,22 @@ textarea {
 .feed-photo-title {
   font-size: 30px;
   font-weight: 500;
+}
+
+.footer {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+  border-right: 1px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.footer * {
+  margin: 10px;
 }
