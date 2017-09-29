@@ -11,9 +11,9 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchUser: id => dispatch(fetchUser(id)),
-  createFollow: (follower_id, following_id) =>
-    dispatch(createFollow(follower_id, following_id)),
-  deleteFollow: follow => dispatch(deleteFollow(follow))
+  createFollow: (follower_id, following_id, userId) =>
+    dispatch(createFollow(follower_id, following_id, userId)),
+  deleteFollow: (follow, userId) => dispatch(deleteFollow(follow, userId))
 });
 
 export default withRouter(connect(

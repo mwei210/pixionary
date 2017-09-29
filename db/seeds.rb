@@ -8,6 +8,7 @@
 
 User.delete_all
 Photo.delete_all
+Follow.delete_all
 
 # Users
 
@@ -43,7 +44,7 @@ user4 = User.create(
   password: "password",
   name: "Gus Vrabel",
   email: "gvrabel@pixionary.com",
-  bio: "I have a DSLR and I'm not afraid to use it",
+  bio: "I have a DSLR and I'm not afraid to use it for black and white pictures.",
   profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/photographer-1210243_960_720_hi0gh9.jpg"
 )
 
@@ -52,8 +53,8 @@ user5 = User.create(
   password: "password",
   name: "Oscar Sandoval",
   email: "oscar89@pixionary.com",
-  bio: "😎",
-  profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506541829/face-2351158_960_720_yvpr3w.jpg"
+  bio: "guitar 😎",
+  profile_photo_url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657229/guitarist-407212_960_720_plnrv8.jpg"
 )
 
 user6 = User.create(
@@ -372,6 +373,134 @@ Photo.create(
   author_id: user3.id
 )
 
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655731/people-741431_960_720_f6wbpj.jpg",
+  title: "Vintage",
+  description: "You'd think this photo was taken in the thirties were it not for the background.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655731/rosary-716250_960_720_nb86vl.jpg",
+  title: "Rosary",
+  description: "You see less of these than you used to.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655731/road-949832_960_720_srenu2.jpg",
+  title: "Cobblestone",
+  description: "Only a matter of time before this road is paved over anew.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552365/cosplay-980228_960_720_rdpse9.jpg",
+  title: "Finger in Hand",
+  description: "So delicate and precious.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655731/hand-351277_960_720_zvzth9.jpg",
+  title: "Handy",
+  description: "Veins and bones in high relief.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655731/black-and-white-50272_960_720_ro92fw.jpg",
+  title: "Rundown",
+  description: "I wonder if trains still cross.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655731/cat-98359_960_720_pov9ju.jpg",
+  title: "Feline Boredom",
+  description: "He know what he's looking at.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655795/waterfall-2531194_960_720_i6ieec.jpg",
+  title: "Waterfall",
+  description: "So Smooth and yet so striated at once.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655795/snails-700868_960_720_ezqg9k.jpg",
+  title: "Snails",
+  description: "They're probably hiding from me.",
+  author_id: user4.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657229/acoustic-guitar-336479_960_720_zivslv.jpg",
+  title: "Acoustic",
+  description: "Nice finish!",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657229/guitar-1180744_960_720_ecmhsx.jpg",
+  title: "Tough Fingerings",
+  description: "Don't judge me!",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657229/guitar-586161_960_720_ikhj1k.jpg",
+  title: "Gorgeous",
+  description: "Really outdid themselves with this one.",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657229/bass-guitar-894524_960_720_wk4wzk.jpg",
+  title: "Bass",
+  description: "I can feel the power already.",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657229/guitar-2276181_960_720_sbca9q.jpg",
+  title: "Outdoorsy",
+  description: "Sometimes you just gotta get outside.",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657615/guitar-869217_960_720_wq6qkq.jpg",
+  title: "Action Shot",
+  description: "I didn't even know this picture was being taken.",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657229/acoustic-guitar-15598_960_720_xks79u.jpg",
+  title: "Unorthodox Mechanics",
+  description: "She's actually pretty good.",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657828/guitar-2626339_960_720_fvaiva.jpg",
+  title: "Chrome",
+  description: "The green lighting looks SICK!",
+  author_id: user5.id
+)
+
+Photo.create(
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657828/guitar-2626339_960_720_fvaiva.jpg",
+  title: "Chrome",
+  description: "The green lighting looks SICK!",
+  author_id: user6.id
+)
+
+
+
 
 Follow.create(
   follower_id: user1.id,
@@ -381,4 +510,14 @@ Follow.create(
 Follow.create(
   follower_id: user1.id,
   following_id: user3.id
+)
+
+Follow.create(
+  follower_id: user1.id,
+  following_id: user4.id
+)
+
+Follow.create(
+  follower_id: user1.id,
+  following_id: user5.id
 )

@@ -20,14 +20,19 @@ class UserShow extends React.Component {
   }
 
   handleFollow() {
-    this.props.createFollow(this.props.currentUser.id, this.props.user.id);
+    this.props.createFollow(
+      this.props.currentUser.id,
+      this.props.user.id,
+      this.props.user.id
+    );
   }
 
   handleUnfollow() {
     this.props.deleteFollow({
       follower_id: this.props.currentUser.id,
       following_id: this.props.user.id
-    });
+    }, this.props.user.id);
+    // .then(this.props.fetchUser(this.props.match.params.userId));
   }
 
   isFollower() {
