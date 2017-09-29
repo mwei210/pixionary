@@ -32,7 +32,6 @@ class UserShow extends React.Component {
       follower_id: this.props.currentUser.id,
       following_id: this.props.user.id
     }, this.props.user.id);
-    // .then(this.props.fetchUser(this.props.match.params.userId));
   }
 
   isFollower() {

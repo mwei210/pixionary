@@ -6,11 +6,9 @@ class FeedIndexItem extends React.Component {
     super(props);
     this.handleClickToPhotoShow = this.handleClickToPhotoShow.bind(this);
     this.handleClickToUserShow = this.handleClickToUserShow.bind(this);
-    this.handleFollow = this.handleFollow.bind(this);
   }
 
   handleClickToUserShow() {
-    debugger;
     const userId = this.props.photo.author.id;
     this.props.history.push(`/users/${userId}`);
   }
@@ -18,10 +16,6 @@ class FeedIndexItem extends React.Component {
   handleClickToPhotoShow() {
     const photoId = this.props.photo.id;
     this.props.history.push(`/photos/${photoId}`);
-  }
-
-  handleFollow() {
-    // code goes here...
   }
 
   render() {
@@ -44,9 +38,6 @@ class FeedIndexItem extends React.Component {
                 { name }
               </Link>
             </div>
-          </div>
-          <div className="feed-follow-button">
-            <button className="button" onClick={this.handleFollow}>Follow</button>
           </div>
         </div>
         <img
