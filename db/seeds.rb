@@ -492,15 +492,6 @@ Photo.create(
   author_id: user5.id
 )
 
-Photo.create(
-  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506657828/guitar-2626339_960_720_fvaiva.jpg",
-  title: "Chrome",
-  description: "The green lighting looks SICK!",
-  author_id: user6.id
-)
-
-
-
 
 Follow.create(
   follower_id: user1.id,
