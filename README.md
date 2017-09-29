@@ -53,7 +53,7 @@ Backend, frontend, and styling decisions were guided in large part by detailed w
 ![Photo Form](app/assets/images/pixionary_wireframe_photo_form.png)
 ![Photo Show](app/assets/images/pixionary_wireframe_photo_show.png)
 ![User Show](app/assets/images/pixionary_wireframe_user_show.png)
-![Photo Feed](app/assets/images/pixionary_wireframe_photo_feed.png)
+![Photo Feed](app/assets/images/pixionary_wireframe _photo_feed.png)
 
 ## Planned Features
 
