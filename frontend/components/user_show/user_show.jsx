@@ -6,7 +6,7 @@ class UserShow extends React.Component {
   constructor(props) {
     super(props);
     this.handleFollow = this.handleFollow.bind(this);
-    // this.handleUnfollow = this.handleUnfollow.bind(this);
+    this.handleUnfollow = this.handleUnfollow.bind(this);
   }
 
   componentDidMount() {
@@ -23,13 +23,16 @@ class UserShow extends React.Component {
     this.props.createFollow(this.props.currentUser.id, this.props.user.id);
   }
 
-  // handleUnfollow() {
-  //   this.props.deleteFollow(this.props.)
-  // }
+  handleUnfollow() {
+    this.props.deleteFollow({
+      follower_id: this.props.currentUser.id,
+      following_id: this.props.user.id
+    });
+  }
 
   isFollower() {
     return (
-      this.props.user.followers.include(this.props.currentUser.id) ?
+      this.props.user.followers.includes(this.props.currentUser.id) ?
         true : false
     )
   }
@@ -42,18 +45,22 @@ class UserShow extends React.Component {
     }
     else {
       if (this.isFollower()) {
-        <div>
-          <button className="button" onClick={this.handleUnfollow}>
-            Unfollow
-          </button>
-        </div>
+        return (
+          <div>
+            <button className="button" onClick={this.handleUnfollow}>
+              Unfollow
+            </button>
+          </div>
+        )
       }
       else {
-        <div>
-          <button className="button" onClick={this.handleFollow}>
-            Follow
-          </button>
-        </div>
+        return (
+          <div>
+            <button className="button" onClick={this.handleFollow}>
+              Follow
+            </button>
+          </div>
+        )
       }
     }
   }

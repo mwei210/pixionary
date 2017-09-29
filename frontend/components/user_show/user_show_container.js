@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   fetchUser: id => dispatch(fetchUser(id)),
   createFollow: (follower_id, following_id) =>
     dispatch(createFollow(follower_id, following_id)),
-  deleteFollow: id => dispatch(deleteFollow(id))
+  deleteFollow: follow => dispatch(deleteFollow(follow))
 });
 
 export default withRouter(connect(

@@ -6,7 +6,7 @@ export const createFollow = (follower_id, following_id) => dispatch => (
     .then(userId => dispatch(fetchUser(userId)))
 );
 
-export const deleteFollow = id => dispatch => (
-  FollowAPIUtil.deleteFollow(id)
+export const deleteFollow = follow => dispatch => (
+  FollowAPIUtil.deleteFollow(follow)
     .then(userId => dispatch(fetchUser(userId)))
 );
