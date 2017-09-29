@@ -24,8 +24,13 @@ export const clearErrors = () => ({
   type: CLEAR_ERRORS
 });
 
-export const fetchPhotos = userId => dispatch => (
-  PhotoAPIUtil.fetchPhotos(userId)
+export const fetchFeedPhotos = () => dispatch => (
+  PhotoAPIUtil.fetchFeedPhotos()
+    .then(photos => dispatch(receivePhotos(photos)))
+);
+
+export const fetchUserPhotos = userId => dispatch => (
+  PhotoAPIUtil.fetchUserPhotos(userId)
     .then(photos => dispatch(receivePhotos(photos)))
 );
 

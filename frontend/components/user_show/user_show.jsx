@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import PhotoIndexContainer from '../photo_index/photo_index_container';
 
 class UserShow extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleFollow = this.handleFollow.bind(this);
+    // this.handleUnfollow = this.handleUnfollow.bind(this);
+  }
+
   componentDidMount() {
     this.props.fetchUser(this.props.match.params.userId);
   }
@@ -13,11 +19,50 @@ class UserShow extends React.Component {
     }
   }
 
+  handleFollow() {
+    this.props.createFollow(this.props.currentUser.id, this.props.user.id);
+  }
+
+  // handleUnfollow() {
+  //   this.props.deleteFollow(this.props.)
+  // }
+
+  isFollower() {
+    return (
+      this.props.user.followers.include(this.props.currentUser.id) ?
+        true : false
+    )
+  }
+
+  followButton() {
+    if (this.props.currentUser.id === this.props.user.id) {
+      return (
+        <div></div>
+      )
+    }
+    else {
+      if (this.isFollower()) {
+        <div>
+          <button className="button" onClick={this.handleUnfollow}>
+            Unfollow
+          </button>
+        </div>
+      }
+      else {
+        <div>
+          <button className="button" onClick={this.handleFollow}>
+            Follow
+          </button>
+        </div>
+      }
+    }
+  }
+
   render() {
     if (!this.props.user) {
       return (<div>Loading...</div>);
     }
-    const { username, name, email, bio, profile_photo_url } = this.props.user;
+    const { name, bio, profile_photo_url, followers, followings } = this.props.user;
     return (
       <div className="user-show-container">
         <div className="user-info-container">
@@ -30,11 +75,12 @@ class UserShow extends React.Component {
           </div>
           <div className="profile-follows">
             <div className="followers">
-              35 followers
+              {followers.length} followers
             </div>
             <div className="following">
-              118 following
+              {followings.length} following
             </div>
+            {this.followButton()}
           </div>
         </div>
         <PhotoIndexContainer/>

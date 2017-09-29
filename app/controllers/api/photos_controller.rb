@@ -4,13 +4,12 @@ class Api::PhotosController < ApplicationController
       @photos = User.find(params[:id]).photos
     else
       if current_user
-        debugger
         @user = current_user
-        if @user.followings.length.empty?
+        if @user.followings.empty?
           @photos = Photo.all
         else
           @photos = Photo
-          .where("author_id in ?", @user.followings)
+          .where("author_id in (?)", @user.followings.to_a)
           .order(created_at: :desc)
         end
       end

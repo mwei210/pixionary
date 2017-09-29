@@ -5,7 +5,8 @@ import { createFollow, deleteFollow } from '../../actions/follow_actions';
 import UserShow from './user_show';
 
 const mapStateToProps = (state, ownProps) => ({
-  user: state.entities.users[ownProps.match.params.userId]
+  user: state.entities.users[ownProps.match.params.userId],
+  currentUser: state.session.currentUser
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

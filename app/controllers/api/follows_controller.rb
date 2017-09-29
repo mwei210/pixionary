@@ -1,13 +1,12 @@
 class Api::FollowsController < ApplicationController
   def create
     @follow = Follow.new(follow_params)
-    @follow.follower_id = current_user.id;
-    if @follow.save
-
-    end
+    @follow.save
   end
 
   def destroy
+    @follow = Follow.find(params[:id])
+    @follow.destroy
   end
 
   def follow_params

@@ -25,9 +25,9 @@ const App = () => (
       <AuthRoute path="/login" component={SessionFormContainer} />
       <AuthRoute path="/signup" component={SessionFormContainer} />
       <ProtectedRoute path="/photos/create" component={PhotoFormContainer} />
+      <ProtectedRoute path="/feed" component={FeedIndexContainer} />
       <Route path="/photos/:photoId" component={PhotoShowContainer} />
       <Route path="/users/:userId" component={UserShowContainer} />
-      <Route path="/feed" component={FeedIndexContainer} />
     </Switch>
   </div>
 );
