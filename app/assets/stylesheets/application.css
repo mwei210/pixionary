@@ -444,6 +444,9 @@ textarea {
   background-color: black;
   border-right: 1px;
   font-family: 'Roboto', sans-serif;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
 }
 
 .footer * {
