@@ -73,4 +73,4 @@ Users will be able to follow other users from the feed directly rather than havi
 Users will be able to search for other users and photos
 
 ### Tags
-Users will be able to label their photos with tags topics for easier searching
+Users will be able to label their photos with tags for easier searching
