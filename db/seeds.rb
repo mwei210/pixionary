@@ -346,7 +346,7 @@ Photo.create(
 )
 
 Photo.create(
-  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506551015/adorable-1851594_960_720_ynnn3r.jpg",
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552364/order-to-turn-its-2441681_960_720_tpbh3t.jpg",
   title: "Captain America",
   description: "My money is on the Captain.",
   author_id: user3.id
@@ -395,7 +395,7 @@ Photo.create(
 )
 
 Photo.create(
-  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506552365/cosplay-980228_960_720_rdpse9.jpg",
+  url: "https://res.cloudinary.com/doo201f3d/image/upload/v1506655731/baby-203048_960_720_zgolzn.jpg",
   title: "Finger in Hand",
   description: "So delicate and precious.",
   author_id: user4.id
